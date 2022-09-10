@@ -3,9 +3,8 @@ const app = express();
 
 //Endpoints
 
-app.get('/', (req, res)=>{
-    res.send('Hello from express and typescript');
-})
+import home from './routes/home';
+app.use('/', home);
 
 
 const port = process.env.PORT || 3000;
